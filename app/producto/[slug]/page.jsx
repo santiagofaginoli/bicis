@@ -55,28 +55,37 @@ const ProductDetails = async ({ params }) => {
                 <h3>{bici.nombre}</h3>
                 <p className="text-lg font-semibold">${bici.precio}</p>
               </div>
-                <p>{bici.descripcion}</p>
-                <AddToCartBtn text='Añadir al carro' btnStyles='btn btn-accent'/>
+              <p>{bici.descripcion}</p>
+              <AddToCartBtn
+                price_id={bici.precio_id}
+                name={bici.nombre}
+                currency="ARS"
+                description={bici.descripcion}
+                images={bici.images}
+                price={bici.precio}
+                text="Añadir al carro"
+                btnStyles="btn btn-accent"
+              />
             </div>
             {/* info */}
             <div className="flex flex-col gap-3">
               <div className="flex gap-2">
-                <PackageCheck size={20} className="text-accent"/>
+                <PackageCheck size={20} className="text-accent" />
                 <p>Envio gratuito en ordenes de mas de $130</p>
               </div>
 
               <div className="flex gap-2">
-                <RefreshCw size={20} className="text-accent"/>
+                <RefreshCw size={20} className="text-accent" />
                 <p>Garantia por 30 dias</p>
               </div>
 
               <div className="flex gap-2">
-                <Bike size={20} className="text-accent"/>
+                <Bike size={20} className="text-accent" />
                 <p>Las mejores bicicletas del pais</p>
               </div>
 
               <div className="flex gap-2">
-                <Clock size={20} className="text-accent"/>
+                <Clock size={20} className="text-accent" />
                 <p>Entrega inmediata</p>
               </div>
             </div>
@@ -88,4 +97,3 @@ const ProductDetails = async ({ params }) => {
 };
 
 export default ProductDetails;
-

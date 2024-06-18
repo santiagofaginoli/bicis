@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import { useShoppingCart } from "use-shopping-cart";
 
 const CheckoutBtn = () => {
+  const handleCheckout = async () => {
+    try {
+      const res = await redirectToCheckout();
+      if (res?.error) {
+        console.log(res);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const { redirectToCheckout } = useShoppingCart();
   return (
-    <button className='btn btn-primary w-full'>Continuar con el pago</button>
-  )
-}
+    <button className="btn btn-primary w-full" onClick={handleCheckout}>
+      Continuar con el pago
+    </button>
+  );
+};
 
-export default CheckoutBtn
+export default CheckoutBtn;

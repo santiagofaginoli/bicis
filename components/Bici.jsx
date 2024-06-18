@@ -31,7 +31,7 @@ const Bici = ({ bici }) => {
         {/* boton */}
         <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center gap-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
           <AddToCartBtn
-            id={bici._id}
+            price_id={bici.precio_id}
             name={bici.nombre}
             currency="ARS"
             description={bici.descripcion}
