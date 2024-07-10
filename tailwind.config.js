@@ -22,17 +22,31 @@ module.exports = {
     fontFamily: {
       rajdhani: "var(--font-rajdhani)",
     },
-    extend: {
-      colors: {
-        primary: {
-          DEFAULT: "#222222",
-          hover: "#2f2f2f",
-        },
-        accent: {
-          DEFAULT: "#ed1d24",
-          hover: "#d6001c",
-        },
+    colors: {
+      white: "#fff",
+      black: "#273029",
+      primary: {
+        DEFAULT: "#222222",
+        hover: "#2f2f2f",
       },
+      accent: {
+        DEFAULT: "#ed1d24",
+        hover: "#d6001c",
+      },
+      soft_green: {
+        DEFAULT: "#85c7dc",
+        secondary: "#f3f9fb",
+      },
+      grey: {
+        DEFAULT: "#888",
+        secondary: "#f8f8f8",
+      },
+      orange: "#f2994a",
+      outline: "#f1f1f1",
+      pink: "#f3d1d7",
+      body: "#e5e5e5",
+    },
+    extend: {
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -47,6 +61,10 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+    },
+    backgroundImage: {
+      hero: "url(/hero/bg.png)",
+      hero2: "url(/hero/bg-2.png)",
     },
   },
   plugins: [require("tailwindcss-animate")],

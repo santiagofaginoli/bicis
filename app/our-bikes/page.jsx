@@ -1,5 +1,7 @@
 import BiciCategorias from "@/components/BiciCategorias";
 import { client } from "../lib/sanity";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/variants";
 
 const getData = async () => {
   const query = `*[_type == 'producto'] {
@@ -26,5 +28,4 @@ const OurBikes = async () => {
     </div>
   );
 };
-
 export default OurBikes;
