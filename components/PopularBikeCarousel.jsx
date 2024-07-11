@@ -14,10 +14,9 @@ import { fadeIn } from "@/variants";
 const PopularBikeCarousel = ({ bicis }) => {
   return (
     <motion.div
-      variants={fadeIn("up", 0.2)}
-      initial="hidden"
-      whileInView={"show"}
-      viewport={{ once: true, amount: 0 }}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
     >
       <Swiper
         slidesPerView={1}
