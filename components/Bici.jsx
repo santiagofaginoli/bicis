@@ -12,7 +12,7 @@ const Bici = ({ bici }) => {
     (bici) => bici.nombre === "popular"
   );
   return (
-    <motion.div className="group border-2 hover:cursor-pointer border-outline rounded-xl hover:bg-accent-hover transition-all duration-700">
+    <div className="group border-2 hover:cursor-pointer border-outline rounded-xl hover:bg-accent-hover transition-all duration-700">
       <div className=" h-[328px] mb-5 p-0 overflow-hidden relative mx-auto xl:mx-0">
         <div className="bg-white rounded-xl group-hover:bg-accent-hover w-full h-full transition-all duration-700 flex justify-center items-center">
           {/* badge */}
@@ -64,7 +64,7 @@ const Bici = ({ bici }) => {
           ${bici.precio}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
