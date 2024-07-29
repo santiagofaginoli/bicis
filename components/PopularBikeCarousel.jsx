@@ -9,11 +9,8 @@ import "swiper/css/pagination";
 
 //modulos requeridos
 import { Autoplay, Pagination } from "swiper/modules";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/variants";
 const PopularBikeCarousel = ({ bicis }) => {
   return (
-    <motion.div>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -45,7 +42,6 @@ const PopularBikeCarousel = ({ bicis }) => {
           );
         })}
       </Swiper>
-    </motion.div>
   );
 };
 
