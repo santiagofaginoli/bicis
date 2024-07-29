@@ -37,16 +37,11 @@ const PopularBikeCarousel = ({ bicis }) => {
       >
         {bicis.map((bici) => {
           return (
-            <motion.div
-              variants={fadeIn("up", 0.4)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0 }}
-            >
+            <div>
               <SwiperSlide key={bici._id}>
                 <Bici bici={bici} />
               </SwiperSlide>
-            </motion.div>
+            </div>
           );
         })}
       </Swiper>
