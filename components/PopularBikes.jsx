@@ -25,7 +25,6 @@ const PopularBikes = () => {
 
       try {
         const data = await client.fetch(query);
-        console.log("Fetched data:", data); // Verifica los datos aquí
         setBicis(data);
       } catch (error) {
         console.error("Error fetching data:", error);
