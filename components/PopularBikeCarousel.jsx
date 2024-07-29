@@ -13,11 +13,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
 const PopularBikeCarousel = ({ bicis }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
+    <motion.div>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
